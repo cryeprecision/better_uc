@@ -1,0 +1,11 @@
+{
+    "prettier.semi": false,
+    "prettier.arrowParens": "avoid",
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.printWidth": 140,
+    "editor.rulers": [
+        140
+    ],
+}

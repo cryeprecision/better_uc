@@ -29,6 +29,7 @@ const customCss = String.raw`
 }
 .myImg {
     margin-top: 0.5rem;
+    max-width: 100%;
 }
 .unselectable {
     -webkit-touch-callout: none;

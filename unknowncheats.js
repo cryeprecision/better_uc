@@ -128,7 +128,7 @@ const wrapImagesInSpoiler = () => {
 }
 
 const removeSignatures = () => {
-  $('td[id^=td_post_]>div:nth-child(2)').css({ display: 'none' })
+  $('td[id^=td_post_]>div>div.fixedsig').parent().css({ display: 'none' })
 }
 
 const runAll = () => {

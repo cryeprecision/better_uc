@@ -115,7 +115,7 @@ const wrapImagesInSpoiler = () => {
   const postImgs = $('div[id^=post_message_]')
     .find('img')
     .not('.inlineimg')
-    .filter((i, e) => !e.src.endsWith('/wol_error.gif'))
+    .filter((i, e) => !e.src.includes('unknowncheats.me/forum/images/'))
   // Remove `width` and `height` to make the image full-size
   postImgs.removeAttr('width').removeAttr('height').addClass('myImg')
   // Wrap the image in a `details` tag

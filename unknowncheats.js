@@ -110,8 +110,11 @@ const compactifyUserInfos = () => {
 const wrapImagesInSpoiler = () => {
   // Remove the resize warnings
   $('table[id^=ncode_imageresizer_warning_]').css({ display: 'none' })
-  // Find all images within posts that aren't emojis
-  const postImgs = $('div[id^=post_message_]>img').not('.inlineimg')
+  // Find all images within posts that aren't emojis or part of a resize warning
+  const postImgs = $('div[id^=post_message_]')
+    .find('img')
+    .not('.inlineimg')
+    .filter((i, e) => !e.src.endsWith('/wol_error.gif'))
   // Remove `width` and `height` to make the image full-size
   postImgs.removeAttr('width').removeAttr('height').addClass('myImg')
   // Wrap the image in a `details` tag

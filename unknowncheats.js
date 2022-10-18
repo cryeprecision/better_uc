@@ -127,11 +127,16 @@ const wrapImagesInSpoiler = () => {
     .insertBefore(postImgs)
 }
 
+const removeSignatures = () => {
+  $('td[id^=td_post_]>div:nth-child(2)').css({ display: 'none' })
+}
+
 const runAll = () => {
   addMarkAllRead()
   addCopyToCodeBlocks()
   compactifyUserInfos()
   wrapImagesInSpoiler()
+  removeSignatures()
 }
 
 // Inject custom css rules

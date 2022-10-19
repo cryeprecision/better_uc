@@ -99,7 +99,7 @@ const runAll = () => {
 };
 
 // Inject custom css rules
-$(`<style type='text/css'>${customCss}</style>`).appendTo('head');
+$(`<style type='text/css'>${GM_getResourceText('CUSTOM_CSS')}</style>`).appendTo('head');
 
 // Do the thingies
 runAll();

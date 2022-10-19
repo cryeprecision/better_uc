@@ -1,46 +1,5 @@
 /// <reference path="./jquery-3.6.0.js" />
 
-const customCss = String.raw`
-.copyButton {
-    width: 100%;
-    height: 30px;
-    color: rgb(200, 200, 200);
-    background-color: rgb(32, 32, 32);
-    margin: 5px 0 0 0;
-    border: none;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-    transition: 200ms;
-}
-.copyButton:hover {
-    background-color: rgb(42, 42, 42);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
-}
-.myDetails {}
-.mySummary {
-    font-weight: bold;
-    padding: 1rem;
-    background-color: rgb(32, 32, 32);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-    transition: 200ms;
-}
-.mySummary:hover {
-    background-color: rgb(42, 42, 42);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
-}
-.myImg {
-    margin-top: 0.5rem;
-    max-width: 100%;
-}
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-`;
-
 // Copy some text to the clipboard
 const copyToClipboard = async text => {
   try {
@@ -140,7 +99,7 @@ const runAll = () => {
 };
 
 // Inject custom css rules
-$(`<style type='text/css'>${customCss}</style>`).appendTo('head');
+$(`<style type='text/css'>${GM_getResourceText('CUSTOM_CSS')}</style>`).appendTo('head');
 
 // Do the thingies
 runAll();

@@ -41,6 +41,27 @@ const addCopyToCodeBlocks = () => {
   );
 };
 
+const addCopyToCodeLines = () => {
+  const getLineText = elem => {
+    const text = $(elem).parent().get(0).innerText;
+    return text.substring('code'.length);
+  };
+
+  const codeBlocks = $('pre.prettyprint.linenums.prettyprinted');
+  const codeLines = codeBlocks.find('>ol>li');
+
+  // add hover effect to code-lines
+  codeLines.addClass('codeLine');
+
+  // make template for copy-button
+  const copyButton = $('<button>')
+    .addClass('copyCodeLineButton')
+    .text('copy')
+    .on('click', ({ target }) => copyToClipboard(getLineText(target)));
+  // add copy-button to each line
+  copyButton.prependTo(codeLines);
+};
+
 const compactifyUserInfos = () => {
   const postTables = $('#posts')
     .find('table')
@@ -93,6 +114,7 @@ const removeSignatures = () => {
 const runAll = () => {
   addMarkAllRead();
   addCopyToCodeBlocks();
+  addCopyToCodeLines();
   compactifyUserInfos();
   wrapImagesInSpoiler();
   removeSignatures();
@@ -100,6 +122,11 @@ const runAll = () => {
 
 // Inject custom css rules
 $(`<style type='text/css'>${GM_getResourceText('CUSTOM_CSS')}</style>`).appendTo('head');
+
+// Inject material ui
+// $('<meta name="viewport" content="width=device-width, initial-scale=1">').appendTo('head');
+// $('<link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />').appendTo('head');
+// $('<script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>').appendTo('head');
 
 // Do the thingies
 runAll();

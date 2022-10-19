@@ -9,9 +9,20 @@
     transition: 200ms;
 }
 
-.copyButton:hover {
+.copyButton:hover .copyCodeLineButton:hover {
     background-color: rgb(42, 42, 42);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.copyCodeLineButton {
+    width: 50px;
+    height: 100%;
+    color: rgb(200, 200, 200);
+    background-color: rgb(63, 63, 63);
+    border: none;
+    margin: 0 10px 0 0;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    transition: 200ms;
 }
 
 .myDetails {}
@@ -32,6 +43,10 @@
 .myImg {
     margin-top: 0.5rem;
     max-width: 100%;
+}
+
+.codeLine:hover {
+    background-color: rgb(42, 42, 42);
 }
 
 .unselectable {

@@ -1,11 +1,16 @@
 {
-    "prettier.semi": false,
+    "prettier.semi": true,
     "prettier.arrowParens": "avoid",
     "prettier.singleQuote": true,
     "prettier.jsxSingleQuote": true,
     "prettier.trailingComma": "all",
     "prettier.printWidth": 140,
+    "prettier.useTabs": false,
+    "prettier.tabWidth": 2,
     "editor.rulers": [
         140
     ],
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
 }

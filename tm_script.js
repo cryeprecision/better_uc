@@ -13,6 +13,6 @@
 
 // For development
 // @require      file:///C:/.../better_uc/unknowncheats.js
-// @resource     CUSTOM_CSS file:///C:/.../better_uc/unknowncheats.js
+// @resource     CUSTOM_CSS file:///C:/.../better_uc/style.css
 
 // The script itself is in a separate file so you can edit it with VSCode or something

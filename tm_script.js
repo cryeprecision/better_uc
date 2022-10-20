@@ -8,8 +8,8 @@
 // @run-at       document-idle
 // @grant        GM_getResourceText
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
-// @require      https://raw.githubusercontent.com/cryeprecision/better_uc/feature/link-to-repo/unknowncheats.js
-// @resource     CUSTOM_CSS https://raw.githubusercontent.com/cryeprecision/better_uc/feature/link-to-repo/style.css
+// @require      https://raw.githubusercontent.com/cryeprecision/better_uc/main/unknowncheats.js
+// @resource     CUSTOM_CSS https://raw.githubusercontent.com/cryeprecision/better_uc/main/style.css
 // ==/UserScript==
 
 // For development

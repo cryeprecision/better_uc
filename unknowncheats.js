@@ -115,23 +115,12 @@ const removeSignatures = () => {
   $('td[id^=td_post_]>div>div.fixedsig').parent().css({ display: 'none' });
 };
 
-const runAll = () => {
-  addMarkAllRead();
-  addCopyToCodeBlocks();
-  addCopyToCodeLines();
-  compactifyUserInfos();
-  wrapImagesInSpoiler();
-  removeSignatures();
-  removeBannerImage();
+const injectCss = () => {
+  // Inject custom css rules
+  $(`<style type='text/css'>${GM_getResourceText('CUSTOM_CSS')}</style>`).appendTo('head');
+
+  // Inject material ui
+  // $('<meta name="viewport" content="width=device-width, initial-scale=1">').appendTo('head');
+  // $('<link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />').appendTo('head');
+  // $('<script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>').appendTo('head');
 };
-
-// Inject custom css rules
-$(`<style type='text/css'>${GM_getResourceText('CUSTOM_CSS')}</style>`).appendTo('head');
-
-// Inject material ui
-// $('<meta name="viewport" content="width=device-width, initial-scale=1">').appendTo('head');
-// $('<link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />').appendTo('head');
-// $('<script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>').appendTo('head');
-
-// Do the thingies
-runAll();

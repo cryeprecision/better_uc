@@ -16,3 +16,12 @@
 // @resource     CUSTOM_CSS file:///C:/.../better_uc/style.css
 
 // The script itself is in a separate file so you can edit it with VSCode or something
+
+injectCss();
+addMarkAllRead();
+addCopyToCodeBlocks();
+addCopyToCodeLines();
+compactifyUserInfos();
+wrapImagesInSpoiler();
+removeSignatures();
+removeBannerImage();

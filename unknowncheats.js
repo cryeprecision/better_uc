@@ -62,6 +62,10 @@ const addCopyToCodeLines = () => {
   copyButton.prependTo(codeLines);
 };
 
+const removeBannerImage = () => {
+  $('#bannerImage').parents().eq(3).css({ display: 'none' });
+};
+
 const compactifyUserInfos = () => {
   const postTables = $('#posts')
     .find('table')
@@ -118,6 +122,7 @@ const runAll = () => {
   compactifyUserInfos();
   wrapImagesInSpoiler();
   removeSignatures();
+  removeBannerImage();
 };
 
 // Inject custom css rules
